@@ -1,0 +1,11 @@
+leader_skill: "Corroded Body and Mind" or "Terrifying Conquerors" Category Ki +3 and HP, ATK & DEF +130%
+super_attack: {"name": "Buster Cannon", "effect": "Raises DEF for 1 turn; Causes supreme damage to enemy; Seals Super Attack"}
+ultra_super_attack: {"name": null, "effect": null}
+passive_skill: {"name": "Confirmation of Power", "sections": [{"condition": "Basic effect(s)", "effects": ["\"Corroded Body and Mind\" Category allies' Ki +1 and ATK & DEF 30%"]}, {"condition": "Per \"Corroded Body and Mind\" or \"Terrifying Conquerors\" Category ally on the team (depending on which Category has more members)", "effects": ["ATK & DEF 50%", "Damage reduction rate 5%"]}, {"condition": "When there is an ally whose name includes \"Baby\" attacking in the same turn, or when all allies attacking in the same turn are \"Corroded Body and Mind\" Category characters", "effects": ["ATK 100% when attacking", "Guards all attacks"]}, {"condition": "As the 1st attacker in a turn", "effects": ["Ki +1 and ATK & DEF 150%", "Damage reduction rate 15%", "Attacked enemy's ATK & DEF 30% for 2 turns"]}, {"condition": "After receiving an attack", "effects": ["ATK & DEF 250%", "Launches an additional Super Attack"]}]}
+active_skill: {"name": null, "effect": null, "activation_conditions": null}
+link_skills: ["Thirst for Conquest", "Coward", "GT", "Loyalty", "Royal Lineage", "Hatred of Saiyans", "Fierce Battle"]
+categories: ["Corroded Body and Mind", "Terrifying Conquerors", "Hybrid Saiyans", "Earth-Bred Fighters", "Mission Execution"]
+stats: {"Cost": 40, "Max Lv": 120, "SA Lv": 10, "HP": {"Base Min": 2777, "Base Max": 9167, "55%": 11167, "100%": 13767}, "ATK": {"Base Min": 2653, "Base Max": 8756, "55%": 10756, "100%": 13756}, "DEF": {"Base Min": 1589, "Base Max": 5244, "55%": 7244, "100%": 10644}}
+domains: []
+rarity_detected: UR
+type_token: agl

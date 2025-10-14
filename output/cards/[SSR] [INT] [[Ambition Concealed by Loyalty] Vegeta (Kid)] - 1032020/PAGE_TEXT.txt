@@ -1,0 +1,11 @@
+leader_skill: "Successors" Category Ki +2 and HP, ATK & DEF +30%; or AGL, INT & PHY Types Ki +1 and HP, ATK & DEF +30%
+super_attack: {"name": "Galick Beam", "effect": "Raises ATK & DEF for 1 turn; Causes supreme damage; A medium chance of stunning the enemy"}
+ultra_super_attack: {"name": null, "effect": null}
+passive_skill: {"name": "A Formidable Force in the Making", "sections": [{"condition": "Basic effect(s)", "effects": ["Ki +1 and ATK & DEF 100%"]}, {"condition": "When facing 2 or more enemies", "effects": ["ATK & DEF 100%", "\"Space-Traveling Warriors\" or \"Gifted Warriors\" Category allies' ATK & DEF 20% for 1 turn"]}, {"condition": "When facing 3 or more enemies", "effects": ["ATK & DEF 100%", "\"Space-Traveling Warriors\" or \"Gifted Warriors\" Category allies' ATK & DEF 30% for 1 turn"]}, {"condition": "When attacking with 12 or more Ki", "effects": ["ATK & DEF 100%", "Launches an additional attack that has a high chance of becoming a Super Attack"]}]}
+active_skill: {"name": null, "effect": null, "activation_conditions": null}
+link_skills: ["Saiyan Warrior Race", "Prodigies", "The Saiyan Lineage", "Royal Lineage", "Thirst for Conquest", "Prepared for Battle"]
+categories: ["Pure Saiyans", "Vegeta's Family", "Youth", "Terrifying Conquerors", "Space-Traveling Warriors", "Gifted Warriors", "Successors", "Mission Execution"]
+stats: {"Cost": 13, "Max Lv": 80, "SA Lv": 10, "HP": {"Base Min": 2178, "Base Max": 8110, "55%": 9710, "100%": 11110}, "ATK": {"Base Min": 1891, "Base Max": 7233, "55%": 8833, "100%": 10233}, "DEF": {"Base Min": 993, "Base Max": 3660, "55%": 5260, "100%": 6660}}
+domains: []
+rarity_detected: SSR
+type_token: int

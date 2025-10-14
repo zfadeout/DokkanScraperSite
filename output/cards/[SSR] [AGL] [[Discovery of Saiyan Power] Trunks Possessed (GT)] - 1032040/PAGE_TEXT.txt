@@ -1,0 +1,11 @@
+leader_skill: "Corroded Body and Mind" or "Terrifying Conquerors" Category Ki +2 and HP, ATK & DEF +100%
+super_attack: {"name": "Buster Cannon", "effect": "Raises DEF for 1 turn; Causes supreme damage to enemy"}
+ultra_super_attack: {"name": null, "effect": null}
+passive_skill: {"name": "Discovery of Power", "sections": [{"condition": "Basic effect(s)", "effects": ["\"Corroded Body and Mind\" Category allies' ATK & DEF 20%"]}, {"condition": "Per \"Corroded Body and Mind\" or \"Terrifying Conquerors\" Category ally on the team (depending on which Category has more members)", "effects": ["ATK & DEF 30%"]}, {"condition": "As the 1st attacker in a turn", "effects": ["Ki +1 and ATK & DEF 100%", "Damage reduction rate 10%"]}, {"condition": "After receiving an attack", "effects": ["ATK & DEF 100%", "Launches an additional attack that has a high chance of becoming a Super Attack"]}]}
+active_skill: {"name": null, "effect": null, "activation_conditions": null}
+link_skills: ["Thirst for Conquest", "Coward", "GT", "Loyalty", "Royal Lineage", "Hatred of Saiyans"]
+categories: ["Corroded Body and Mind", "Terrifying Conquerors", "Hybrid Saiyans", "Earth-Bred Fighters", "Mission Execution"]
+stats: {"Cost": 21, "Max Lv": 80, "SA Lv": 10, "HP": {"Base Min": 1915, "Base Max": 6707, "55%": 8307, "100%": 11307}, "ATK": {"Base Min": 1955, "Base Max": 7220, "55%": 8820, "100%": 12220}, "DEF": {"Base Min": 1115, "Base Max": 3894, "55%": 5494, "100%": 9294}}
+domains: []
+rarity_detected: SSR
+type_token: agl

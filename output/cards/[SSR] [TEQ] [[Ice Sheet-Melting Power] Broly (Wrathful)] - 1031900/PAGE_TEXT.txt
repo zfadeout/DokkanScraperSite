@@ -1,0 +1,11 @@
+leader_skill: "Exploding Rage" Category Ki +2 and HP, ATK & DEF +160%
+super_attack: {"name": "Gigantic Impact", "effect": "Raises ATK & DEF; Causes supreme damage to enemy"}
+ultra_super_attack: {"name": null, "effect": null}
+passive_skill: {"name": "Anomalies", "sections": [{"condition": "Basic effect(s)", "effects": ["ATK & DEF 150%", "High chance of guarding all attacks"]}, {"condition": "For every attack performed", "effects": ["DEF 20% (up to 200%)", "Chance of performing a critical hit 5% (up to 100%)"]}, {"condition": "For every attack received", "effects": ["ATK 10% (up to 100%)", "Launches an additional attack that has a medium chance of becoming a Super Attack (up to 2 times)"]}, {"condition": "For every Super Attack the enemy launches at the character", "effects": ["ATK & DEF 10%"]}]}
+active_skill: {"name": null, "effect": null, "activation_conditions": null}
+link_skills: ["Saiyan Warrior Race", "Prodigies", "Berserker", "Shocking Speed", "Prepared for Battle"]
+categories: ["Exploding Rage", "Movie Bosses", "Pure Saiyans", "Rapid Growth", "Giant Ape Power", "Gifted Warriors", "Super Bosses", "Uncontrollable Power", "Mission Execution"]
+stats: {"Cost": 26, "Max Lv": 80, "SA Lv": 10, "HP": {"Base Min": 2410, "Base Max": 9519, "55%": 11119, "100%": 14119}, "ATK": {"Base Min": 2048, "Base Max": 8106, "55%": 9706, "100%": 13506}, "DEF": {"Base Min": 971, "Base Max": 3769, "55%": 5369, "100%": 8769}}
+domains: []
+rarity_detected: SSR
+type_token: teq

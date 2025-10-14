@@ -1,0 +1,11 @@
+leader_skill: Super TEQ Type Ki +3 and HP, ATK & DEF +90%
+super_attack: {"name": "Kamehameha", "effect": "Greatly raises ATK & DEF for 1 turn; Causes supreme damage; A high chance of stunning the enemy"}
+ultra_super_attack: {"name": null, "effect": null}
+passive_skill: {"name": "Yamcha's Strategy", "sections": [{"condition": "Basic effect(s)", "effects": ["ATK & DEF 200%", "High chance of evading enemy's attack", "High chance of performing a critical hit"]}, {"condition": "Per \"Tournament Participants\" or \"Turtle School\" Category ally on the team (depending on which Category has more members)", "effects": ["ATK & DEF 50% (up to 250%)"]}, {"condition": "When there is another \"Tournament Participants\" or \"Turtle School\" Category ally attacking in the same turn", "effects": ["Ki +4", "Chance of evading enemy's attack 20%", "Launches an additional Super Attack"]}, {"condition": "When attacking with 12 or more Ki", "effects": ["ATK & DEF 200%"]}, {"condition": "When HP is 86% or more", "effects": ["DEF 200%", "Damage reduction rate 20%"]}, {"condition": "When HP is 86% or less", "effects": ["ATK 200%", "Chance of performing a critical hit 50%"]}]}
+active_skill: {"name": null, "effect": null, "activation_conditions": null}
+link_skills: ["Turtle School", "Infighter", "Kamehameha", "Shocking Speed", "The Incredible Adventure", "Guidance of the Dragon Balls", "Shattering the Limit"]
+categories: ["World Tournament", "DB Saga", "Worthy Rivals", "Kamehameha", "Bond of Master and Disciple", "Earthlings", "Earth-Bred Fighters", "Tournament Participants", "Turtle School"]
+stats: {"Cost": 36, "Max Lv": 120, "SA Lv": 10, "HP": {"Base Min": 2265, "Base Max": 7475, "55%": 8675, "100%": 10235}, "ATK": {"Base Min": 2679, "Base Max": 8842, "55%": 10042, "100%": 12082}, "DEF": {"Base Min": 1392, "Base Max": 4595, "55%": 5795, "100%": 7595}}
+domains: []
+rarity_detected: UR
+type_token: teq

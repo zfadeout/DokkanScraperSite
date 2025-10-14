@@ -1,0 +1,11 @@
+leader_skill: "Exploding Rage" Category Ki +3 and HP, ATK & DEF +190%
+super_attack: {"name": "Gigantic Impact", "effect": "Raises ATK & DEF; Causes supreme damage to enemy"}
+ultra_super_attack: {"name": null, "effect": null}
+passive_skill: {"name": "Boiling Wrath", "sections": [{"condition": "Basic effect(s)", "effects": ["ATK & DEF 200%", "Great chance of guarding all attacks"]}, {"condition": "For every attack performed", "effects": ["DEF 30% (up to 300%)", "Chance of performing a critical hit 10% (up to 100%)"]}, {"condition": "For every attack received", "effects": ["ATK 20% (up to 200%)", "Launches an additional attack that has a medium chance of becoming a Super Attack (up to 3 times)"]}, {"condition": "For every Super Attack the enemy launches at the character", "effects": ["ATK & DEF 20%"]}]}
+active_skill: {"name": null, "effect": null, "activation_conditions": null}
+link_skills: ["Saiyan Warrior Race", "Prodigies", "Berserker", "Shocking Speed", "Prepared for Battle", "Fierce Battle"]
+categories: ["Exploding Rage", "Movie Bosses", "Pure Saiyans", "Rapid Growth", "Giant Ape Power", "Gifted Warriors", "Super Bosses", "Uncontrollable Power", "Mission Execution"]
+stats: {"Cost": 50, "Max Lv": 120, "SA Lv": 10, "HP": {"Base Min": 3414, "Base Max": 11269, "55%": 13269, "100%": 15869}, "ATK": {"Base Min": 2734, "Base Max": 9025, "55%": 11025, "100%": 14425}, "DEF": {"Base Min": 1332, "Base Max": 4397, "55%": 6397, "100%": 9397}}
+domains: []
+rarity_detected: UR
+type_token: teq
