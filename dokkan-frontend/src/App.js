@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
 import { Search, Filter, Star, Loader, AlertCircle } from 'lucide-react';
+import CardDetailPage from './CardDetailPage';
 import './App.css';
 
 const API_BASE_URL = 'http://127.0.0.1:5000/api';
@@ -11,20 +13,13 @@ const proxyImage = (url) => {
 };
 
 const CharacterCard = ({ character }) => {
+  const navigate = useNavigate();
   const [imageLoaded, setImageLoaded] = useState(false);
-  const [showDetails, setShowDetails] = useState(false);
   const [loadedImages, setLoadedImages] = useState({
     background: false,
     effect: false,
     character: false
   });
-
-  // Debug: Log assets for cards that aren't loading
-  useEffect(() => {
-    if (!character.assets?.character) {
-      console.log(`Card ${character.name} missing character asset:`, character.assets);
-    }
-  }, [character]);
 
   const typeColors = {
     STR: 'from-red-600 to-red-800',
@@ -41,10 +36,14 @@ const CharacterCard = ({ character }) => {
     SR: 'text-green-300'
   };
 
+  const handleClick = () => {
+    navigate(`/card/${character.id}`);
+  };
+
   return (
     <div 
       className="character-card"
-      onClick={() => setShowDetails(!showDetails)}
+      onClick={handleClick}
       style={{
         background: `linear-gradient(135deg, ${typeColors[character.type] || 'rgba(55, 65, 81, 0.8)'}, rgba(31, 41, 55, 0.9))`
       }}
@@ -197,143 +196,12 @@ const CharacterCard = ({ character }) => {
           </div>
           <Star className="w-5 h-5 text-yellow-400" style={{ flexShrink: 0 }} />
         </div>
-
-        {/* Expanded Details */}
-        {showDetails && (
-          <div style={{ 
-            marginTop: '12px', 
-            paddingTop: '12px', 
-            borderTop: '1px solid rgba(75, 85, 99, 0.5)',
-            maxHeight: '300px',
-            overflowY: 'auto'
-          }}>
-            {/* Leader Skill */}
-            {character.leaderSkill && (
-              <div style={{ marginBottom: '12px' }}>
-                <p style={{ fontSize: '0.75rem', color: 'rgb(209, 213, 219)' }}>
-                  <span style={{ fontWeight: 600, color: 'rgb(250, 204, 21)' }}>Leader: </span>
-                  {character.leaderSkill}
-                </p>
-              </div>
-            )}
-
-            {/* Super Attack */}
-            {character.superAttack?.name && (
-              <div style={{ marginBottom: '8px' }}>
-                <p style={{ fontSize: '0.75rem', color: 'rgb(209, 213, 219)' }}>
-                  <span style={{ fontWeight: 600, color: 'rgb(34, 197, 94)' }}>Super Attack: </span>
-                  {character.superAttack.name}
-                </p>
-                {character.superAttack.effect && (
-                  <p style={{ fontSize: '0.7rem', color: 'rgb(156, 163, 175)', marginTop: '4px' }}>
-                    {character.superAttack.effect}
-                  </p>
-                )}
-              </div>
-            )}
-
-            {/* Ultra Super Attack */}
-            {character.ultraSuperAttack?.name && (
-              <div style={{ marginBottom: '8px' }}>
-                <p style={{ fontSize: '0.75rem', color: 'rgb(209, 213, 219)' }}>
-                  <span style={{ fontWeight: 600, color: 'rgb(168, 85, 247)' }}>Ultra Super: </span>
-                  {character.ultraSuperAttack.name}
-                </p>
-                {character.ultraSuperAttack.effect && (
-                  <p style={{ fontSize: '0.7rem', color: 'rgb(156, 163, 175)', marginTop: '4px' }}>
-                    {character.ultraSuperAttack.effect}
-                  </p>
-                )}
-              </div>
-            )}
-
-            {/* Passive Skill */}
-            {character.passiveSkill?.name && (
-              <div style={{ marginBottom: '8px' }}>
-                <p style={{ fontSize: '0.75rem', color: 'rgb(209, 213, 219)' }}>
-                  <span style={{ fontWeight: 600, color: 'rgb(96, 165, 250)' }}>Passive: </span>
-                  {character.passiveSkill.name}
-                </p>
-                {character.passiveSkill.text && (
-                  <p style={{ fontSize: '0.7rem', color: 'rgb(156, 163, 175)', marginTop: '4px' }}>
-                    {character.passiveSkill.text}
-                  </p>
-                )}
-              </div>
-            )}
-
-            {/* Active Skill */}
-            {character.activeSkill?.name && (
-              <div style={{ marginBottom: '8px' }}>
-                <p style={{ fontSize: '0.75rem', color: 'rgb(209, 213, 219)' }}>
-                  <span style={{ fontWeight: 600, color: 'rgb(251, 146, 60)' }}>Active: </span>
-                  {character.activeSkill.name}
-                </p>
-                {character.activeSkill.effect && (
-                  <p style={{ fontSize: '0.7rem', color: 'rgb(156, 163, 175)', marginTop: '4px' }}>
-                    {character.activeSkill.effect}
-                  </p>
-                )}
-              </div>
-            )}
-
-            {/* Categories */}
-            {character.categories && character.categories.length > 0 && (
-              <div style={{ marginTop: '12px' }}>
-                <p style={{ fontSize: '0.75rem', fontWeight: 600, color: 'rgb(250, 204, 21)', marginBottom: '6px' }}>
-                  Categories:
-                </p>
-                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '4px' }}>
-                  {character.categories.map((cat, idx) => (
-                    <span 
-                      key={idx}
-                      style={{
-                        fontSize: '0.7rem',
-                        padding: '4px 8px',
-                        background: 'rgba(31, 41, 55, 0.8)',
-                        borderRadius: '9999px',
-                        color: 'rgb(209, 213, 219)'
-                      }}
-                    >
-                      {cat}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            )}
-
-            {/* Link Skills */}
-            {character.linkSkills && character.linkSkills.length > 0 && (
-              <div style={{ marginTop: '12px' }}>
-                <p style={{ fontSize: '0.75rem', fontWeight: 600, color: 'rgb(250, 204, 21)', marginBottom: '6px' }}>
-                  Link Skills:
-                </p>
-                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '4px' }}>
-                  {character.linkSkills.map((link, idx) => (
-                    <span 
-                      key={idx}
-                      style={{
-                        fontSize: '0.7rem',
-                        padding: '4px 8px',
-                        background: 'rgba(31, 41, 55, 0.8)',
-                        borderRadius: '9999px',
-                        color: 'rgb(209, 213, 219)'
-                      }}
-                    >
-                      {link}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            )}
-          </div>
-        )}
       </div>
     </div>
   );
 };
 
-export default function App() {
+function HomePage() {
   const [characters, setCharacters] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -535,5 +403,16 @@ export default function App() {
         </div>
       </footer>
     </div>
+  );
+}
+
+export default function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/card/:cardId" element={<CardDetailPage />} />
+      </Routes>
+    </Router>
   );
 }
